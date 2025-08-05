@@ -1,9 +1,9 @@
-import React, {memo, useCallback, useEffect} from 'react';
+import React, { memo, useCallback, useEffect } from 'react';
 import styled from 'styled-components/native';
-import {Colors} from '@/themes/Colors';
-import {ActivityIndicator, Dimensions} from 'react-native';
-import {navigateToLoginScreen, replaceWithMainScreen} from '@/utils/navigation';
-import {useUser} from '@/store/constant';
+import { Colors } from '@/themes/Colors';
+import { ActivityIndicator, Dimensions } from 'react-native';
+import { navigateToLoginScreen, replaceWithMainScreen } from '@/utils/navigation';
+import { useUser } from '@/store/constant';
 import SplashScreen from 'react-native-splash-screen';
 
 const Container = styled.View`
@@ -20,7 +20,7 @@ const Logo = styled.View`
   background-color: #0077cc;
 `;
 export const HomeScreen = memo(function HomeScreen() {
-  const getData = useCallback( () => {
+  const getData = useCallback(() => {
     setTimeout(() => {
       // replaceWithMainScreen();
       navigateToLoginScreen();
@@ -39,7 +39,7 @@ export const HomeScreen = memo(function HomeScreen() {
   return (
     <Container>
       <Logo />
-      <ActivityIndicator size={'large'} color={Colors.gray3} />
+      <ActivityIndicator size={'large'} color={Colors.gray2} />
     </Container>
   );
 });
