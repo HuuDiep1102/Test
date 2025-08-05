@@ -21,19 +21,30 @@ const LoginButton: React.FC<LoginButtonProps> = ({ onPress, title, disabled = fa
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#FF6B35', // Different color on main
-        padding: 12, // Different padding
-        borderRadius: 6, // Different border radius
+        backgroundColor: '#4CAF50', // New green color
+        padding: 16, // Increased padding
+        borderRadius: 10, // Increased border radius
         alignItems: 'center',
-        marginVertical: 8,
+        marginVertical: 12,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     disabled: {
-        backgroundColor: '#999999', // Different disabled color
+        backgroundColor: '#BDBDBD', // New disabled color
+        shadowOpacity: 0,
+        elevation: 0,
     },
     buttonText: {
         color: 'white',
-        fontSize: 14, // Different font size
-        fontWeight: '500', // Different font weight
+        fontSize: 16, // Increased font size
+        fontWeight: '600', // Increased font weight
+        textTransform: 'uppercase',
     },
 });
 
