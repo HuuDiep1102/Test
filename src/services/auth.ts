@@ -17,15 +17,14 @@ export class AuthService {
     }
 
     async login(email: string, password: string): Promise<User> {
-        // Simulate API call with different logic
-        await new Promise(resolve => setTimeout(resolve, 500));
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
 
-        if (email === 'admin@example.com' && password === 'admin123') {
+        if (email === 'test@example.com' && password === 'password') {
             this.currentUser = {
                 id: '1',
                 email,
-                name: 'Admin User',
-                role: 'admin'
+                name: 'Test User'
             };
             return this.currentUser;
         }
