@@ -1,9 +1,9 @@
-import React, {memo, useCallback, useState} from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import styled from "styled-components/native";
-import {Colors} from "@/themes/Colors";
-import {InputBorder} from '@/components/InputBorder';
-import {HeaderBack} from "@/components/HeaderBack";
-import {getBottomSpace} from 'react-native-iphone-x-helper';
+import { Colors } from "@/themes/Colors";
+import { InputBorder } from '@/components/InputBorder';
+import { HeaderBack } from "@/components/HeaderBack";
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 
 const Container = styled.View`
@@ -45,7 +45,7 @@ const LoginText = styled.Text`
 
 const SInputBorder = styled(InputBorder).attrs({
     containerStyle: {
-        marginTop: 12
+        marginTop: 14
     }
 })``;
 

@@ -1,13 +1,13 @@
-import React, {memo, useCallback, useState} from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import styled from 'styled-components/native';
-import {Colors} from '@/themes/Colors';
-import {Dimensions, KeyboardAvoidingView} from 'react-native';
-import {InputBorder} from '@/components/InputBorder';
-import {IC_BACK, IMG_LOGO_SMALL} from '@/assets';
-import {getStatusBarHeight} from 'react-native-status-bar-height';
-import {goBack} from '@/utils/navigation';
+import { Colors } from '@/themes/Colors';
+import { Dimensions, KeyboardAvoidingView } from 'react-native';
+import { InputBorder } from '@/components/InputBorder';
+import { IC_BACK, IMG_LOGO_SMALL } from '@/assets';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { goBack } from '@/utils/navigation';
 
-const {width: DWidth} = Dimensions.get('window');
+const { width: DWidth } = Dimensions.get('window');
 
 const Container = styled(KeyboardAvoidingView)`
   flex: 1;
@@ -15,7 +15,7 @@ const Container = styled(KeyboardAvoidingView)`
 `;
 
 const Top = styled.View`
-  height: 140px;
+  height: 142px;
   padding-top: ${getStatusBarHeight()}px;
   align-items: center;
   justify-content: flex-end;

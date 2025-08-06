@@ -37,7 +37,7 @@ const BtnUpdate = styled.TouchableOpacity`
   width: 100%;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: ${Colors.backgroundColor};
 `;
 
