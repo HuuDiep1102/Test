@@ -1,23 +1,23 @@
-import React, {memo, useCallback, useEffect, useState} from 'react';
+import React, { memo, useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components/native';
-import {Colors} from '@/themes/Colors';
+import { Colors } from '@/themes/Colors';
 import {
   ActivityIndicator,
   Dimensions,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import {requestGetCategoryList} from '@/store/category/functions';
-import {requestGetProductTypes} from '@/store/productType/functions';
-import {requestGetManufactures} from '@/store/manufacture/functions';
-import {goBack, replaceWithMainScreen} from '@/utils/navigation';
-import {useUser} from '@/store/constant';
+import { requestGetCategoryList } from '@/store/category/functions';
+import { requestGetProductTypes } from '@/store/productType/functions';
+import { requestGetManufactures } from '@/store/manufacture/functions';
+import { goBack, replaceWithMainScreen } from '@/utils/navigation';
+import { useUser } from '@/store/constant';
 import Global from '@/utils/Global';
-import {requestGetCountNotificationNotSeen} from '@/store/notification/functions';
-import {InputBorder} from '@/components/InputBorder';
-import {HeaderBack} from '@/components/HeaderBack';
-import {RawUser} from '@/types';
-import {EditUserParams, requestEditUser} from '@/store/constant/functions';
+import { requestGetCountNotificationNotSeen } from '@/store/notification/functions';
+import { InputBorder } from '@/components/InputBorder';
+import { HeaderBack } from '@/components/HeaderBack';
+import { RawUser } from '@/types';
+import { EditUserParams, requestEditUser } from '@/store/constant/functions';
 
 const Container = styled(KeyboardAvoidingView)`
   flex: 1;
@@ -37,7 +37,7 @@ const BtnUpdate = styled.TouchableOpacity`
   width: 100%;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: ${Colors.backgroundColor};
 `;
 
@@ -48,7 +48,7 @@ const TextUpdate = styled.Text`
 `;
 export const UserScreen = memo(function HomeScreen() {
   const user: RawUser | null = useUser();
-  const [state, setState] = useState<EditUserParams>(user ? {...user} : {});
+  const [state, setState] = useState<EditUserParams>(user ? { ...user } : {});
 
   const onValueChange = useCallback(
     (keyName: string, value: string) => {
